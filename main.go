@@ -33,7 +33,10 @@ func main() {
 
 
 	//ROTAS
-	e.GET("/users", UserHandler.GetUsers)
+	e.GET("/users", UserHandler.GetAllUsers)
+	e.GET("users/:id", UserHandler.GetUser)
+	e.PUT("users/:id", UserHandler.UserUpdate)
+
 
 	//INICIAR O SERVIDOR
 	e.Logger.Fatal(e.Start(":8080"))

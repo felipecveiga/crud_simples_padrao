@@ -3,6 +3,6 @@ package model
 type User struct {
 	ID int64 `json:"id" gorm:"primaryKey"`
 	Name string `json:"name"`
-	Age int `json:"age"`
+	Idade int `json:"idade"`
 	Email string `json:"email"`
 }
